@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *edge1Text;
+
+@property (weak, nonatomic) IBOutlet UITextField *edge2Text;
+@property (weak, nonatomic) IBOutlet UITextField *sizeText;
+@property (weak, nonatomic) IBOutlet UILabel *dpiInfoLabel;
+
+- (IBAction)calc:(id)sender;
 
 @end
